@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <style>
+        
+        @import url('https://fonts.googleapis.com/css2?family=Kanit&family=Montserrat+Alternates&display=swap');
+        body {
+            background-color: rgb(255, 255, 255);
+        }
+        h1 {
+            font-family: "Kanit",sans-serif;
+            color:rgb(255, 166, 0)
+        }
+        p, div {
+            font-family: Kanit, sans-serif;
+        }
+        img {
+            margin-top: 1em;
+            margin-bottom: 2em;
+        }
+        table {
+            border-style: solid;
+            border-width: 1px;
+        }
+        .center {
+            text-align: center;
+        }
+    </style>
+</head>
+    <body>
+        <h1 class="center" id="header">สวัสดีชาวโลก</h1>
+        <div class="center"><button type="button" onclick = "document.getElementById('header').style.color='red'">เปลี่ยนสี</button></div>
+        
+        <div class="center">
+            <button onclick="document.getElementById('myImage').src='images/Idle.png'">แมวยืน</button>
+            <img id="myImage" src="images/Idle.png" width="200px">
+            <button onclick="document.getElementById('myImage').src='images/Slide.png'">แมวสไลด์</button>
+        </div>
+        
+            <h1 class="center">Hello, world</h1>
+    <p class="center">Kitagawa Marin</p>
+    <div class="center">Sono Bisque Doll wa Koi wo suru</div>
+    <div class="center"><img src = "images/Kitagawa_Marin.png" width="11%" height="11%"></div>
+    </body>
+</html>
