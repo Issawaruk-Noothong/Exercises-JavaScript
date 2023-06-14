@@ -1,3 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kanit&family=Montserrat+Alternates&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@300&display=swap');
+        body {
+            background-color: rgb(255, 255, 255);
+        }
+        pd,h1,button {
+            font-family: "Kanit",sans-serif;
+            color:rgb(0, 0, 0)
+        }
+        p,b,th {
+            font-family: Sarabun,sans-serif;
+            color: rgb(0, 0, 0);
+        }
+        table1{
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 5px 200px;
+        }
+        .center {
+            text-align: center;
+        }
+        #myTable {
+            display: none;
+            border-collapse: collapse;
+        }
+        table,td,th {
+            border: 1px solid;
+        }
+        th {
+            background-color: lightgoldenrodyellow;
+        }
+    </style>
+</head>
+<body>
+<div class = "center">
+    <table1><tr1><b>แบบฝึกหัด JavaScript</b></tr1></table1>
+</div>
+    <div>
+    <p>สร้างเว็บเพจที่สามารถทําสิ่งต่อไปนี้ได้</p>
+    <p>1. แสดงคําว่า สวัสดีชาวโลก ด้วยข้อความสีดํา แล้วเมื่อกดปุ่ม เปลี่ยนสีใหม่เปลี่ยนเป็นสีแดง</p>
+    <h1 id="header">สวัสดีชาวโลก</h1>
+        <div><button type="button" onclick = "document.getElementById('header').style.color='red'">เปลี่ยนสี</button></div>
+    </div>
+    <br><br>
+    <p>2. ให้แสดงวันที่และเวลาปัจจุบันในรูปแบบไทยดังรูป</p>
+    <pd id="time"></pd>
+    <script>
+    let options = {year: 'numeric', month: 'long', day: 'numeric' ,hour:'2-digit',minute:'2-digit',second:'2-digit'};
+    const d = new Date();let text = d.toLocaleString("th-TH",options);document.getElementById("time").innerHTML = text;
+    </script>
+    <br><br>
+    <p>3. ให้แสดงภาพแมว ซึ่งสามารถสลับท่าทางของแมวตามการกดปุ่มได้ ดังรูป</p>
+    <div>
+        <button id="cat" onclick="document.getElementById('myImage').src='images/Idle.png'">แมวยืน</button>
+        <img id="myImage" src="images/Idle.png" width="200px">
+        <button id="cat" onclick="document.getElementById('myImage').src='images/Slide.png'">แมวสไลด์</button>
+    </div>
+    </script>
+    <br><br>
+    <p>4. ให้สร้างปุ่มซ่อนหรือแสดงตารางได้ ดังรูป</p>
+    <script>
+         function showTable() {
+      var table = document.getElementById("myTable");
+      table.style.display = "table";
+    }
 
     function hideTable() {
       var table = document.getElementById("myTable");
