@@ -56,7 +56,7 @@
     function formatTimeThai(date) {
       var day = date.getDate().toString().padStart(2, '0');
       var month = date.toLocaleString('th-TH', { month: 'long' });
-      var year = date.getFullYear();
+      var year = date.getFullYear()+543;
       var hours = date.getHours().toString().padStart(2, '0');
       var minutes = date.getMinutes().toString().padStart(2, '0');
       var seconds = date.getSeconds().toString().padStart(2, '0');
